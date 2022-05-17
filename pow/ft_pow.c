@@ -9,7 +9,6 @@
 /*   Updated: 2022/05/17 01:46:27 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
 
 unsigned long	ft_pow(const unsigned int nb, const unsigned int pow)
 {
