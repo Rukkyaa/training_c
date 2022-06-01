@@ -12,7 +12,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-size_t	ft_no_space_lenght(char string[])
+size_t	ft_no_space_length(char string[])
 {
 	size_t	length;
 	size_t	i;
@@ -38,7 +38,7 @@ char	*ft_remove_whitespaces(const char *str)
 	size_t	length;
 	char	*no_space_string;
 
-	length = ft_no_space_lenght((char *)str);
+	length = ft_no_space_length((char *)str);
 	no_space_string = (char *) malloc(length * sizeof(char) + 1);
 	i = 0;
 	index_no_space = 0;
