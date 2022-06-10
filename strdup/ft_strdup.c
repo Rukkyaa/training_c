@@ -6,7 +6,7 @@
 /*   By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/10 12:50:16 by rukkyaa           #+#    #+#             */
-/*   Updated: 2022/06/10 14:09:43 by rukkyaa          ###   ########.fr       */
+/*   Updated: 2022/06/10 14:17:39 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdlib.h>
@@ -32,7 +32,7 @@ char	*ft_strdup(const char *string)
 	len = ft_strlen(string);
 	copy = (char *) malloc(len * sizeof(char) + 1);
 	i = 0;
-	while (string[i])
+	while (i <= len)
 	{
 		copy[i] = string[i];
 		i ++;
