@@ -6,7 +6,7 @@
 /*   By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/10 18:18:58 by rukkyaa           #+#    #+#             */
-/*   Updated: 2022/06/10 18:24:43 by rukkyaa          ###   ########.fr       */
+/*   Updated: 2022/06/10 18:41:51 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 unsigned long	factorial(unsigned long nb)
