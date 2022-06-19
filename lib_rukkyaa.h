@@ -35,5 +35,6 @@ size_t	ft_strcount(char *str, char chr);
 char	*ft_strdup(const char *string);
 
 size_t	ft_strlen(const char *str);
+
 #endif
 
