@@ -16,13 +16,17 @@ int	ft_atoi(const char *str)
 	int	i;
 	int	result;
 	int	is_neg;
-
+	
 	i = 0;
 	result = 0;
 	is_neg = 1;
 	if (!str)
 		return (0);
-	else if (str[i] == '-')
+	while (str[i] == ' ')
+	{
+		i ++;
+	}
+	if (str[i] == '-')
 	{
 		is_neg = -1;
 		i ++;
