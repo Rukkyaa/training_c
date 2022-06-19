@@ -1,22 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/14 14:31:03 by rukkyaa           #+#    #+#             */
-/*   Updated: 2022/05/14 14:52:13 by rukkyaa          ###   ########.fr       */
+/*   Created: 2022/06/12 00:10:26 by rukkyaa           #+#    #+#             */
+/*   Updated: 2022/06/12 18:41:39 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "../lib_rukkyaa.h"
+#include "lib_rukkyaa.h"
 
-size_t	ft_strlen(const char *str)
+int	ft_atoi(const char *str)
 {
-	size_t	len;
+	int	i;
+	int	result;
+	int	is_neg;
 
-	len = 0;
-	while (str[len] != '\0')
-		len ++;
-	return (len);
+	i = 0;
+	result = 0;
+	is_neg = 1;
+	if (!str)
+		return (0);
+	else if (str[i] == '-')
+	{
+		is_neg = -1;
+		i ++;
+	}
+	while (str[i] != '\0' && str[i] - '0' >= 0 && str[i] - '0' <= 9)
+	{
+		result = result * 10;
+		result += str[i] - '0';
+		i ++;
+	}
+	return (result * is_neg);
 }
+

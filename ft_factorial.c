@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_feynman_squares.c                               :+:      :+:    :+:   */
+/*   ft_factorial.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/18 01:08:31 by rukkyaa           #+#    #+#             */
-/*   Updated: 2022/05/18 01:35:09 by rukkyaa          ###   ########.fr       */
+/*   Created: 2022/06/10 18:18:58 by rukkyaa           #+#    #+#             */
+/*   Updated: 2022/06/12 19:04:31 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "lib_rukkyaa.h"
 
-unsigned long	feynman_squares(unsigned int n)
+unsigned long	ft_factorial(unsigned long nb)
 {
-	if (n == 0)
-		return (0);
-	else if (n == 1)
+	if (nb == 0)
 		return (1);
-	return (n * n + feynman_squares(n - 1));
+	else
+		return (nb * ft_factorial(nb - 1));
 }

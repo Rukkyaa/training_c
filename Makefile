@@ -11,16 +11,16 @@
 # ************************************************************************** #
 
 SRCS	= main.c \
-			src/ft_atoi.c \
-			src/ft_factorial.c \
-			src/ft_feynman_squares.c \
-			src/ft_pow.c \
-			src/ft_remove_whitespaces.c \
-			src/ft_str_to_lower.c \
-			src/ft_str_to_upper.c \
-			src/ft_strcount.c \
-			src/ft_strdup.c \
-			src/ft_strlen.c
+			ft_atoi.c \
+			ft_factorial.c \
+			ft_feynman_squares.c \
+			ft_pow.c \
+			ft_remove_whitespaces.c \
+			ft_str_to_lower.c \
+			ft_str_to_upper.c \
+			ft_strcount.c \
+			ft_strdup.c \
+			ft_strlen.c
 
 OBJS	= ${SRCS:.c=.o}
 

@@ -1,32 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_to_lower.c                                  :+:      :+:    :+:   */
+/*   ft_pow.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/13 16:58:46 by rukkyaa           #+#    #+#             */
-/*   Updated: 2022/06/13 17:32:53 by rukkyaa          ###   ########.fr       */
+/*   Created: 2022/05/17 01:28:06 by rukkyaa           #+#    #+#             */
+/*   Updated: 2022/05/17 01:46:27 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "../lib_rukkyaa.h"
+#include "lib_rukkyaa.h"
 
-char	*ft_str_to_lower(const char *str)
+unsigned long	ft_pow(const unsigned int nb, const unsigned int pow)
 {
-	char	*str_lower;
-	size_t	len;
-	size_t	i;
+	unsigned long	i;
+	unsigned long	result;
 
-	len = ft_strlen(str);
-	str_lower = (char *) malloc(len * sizeof(char) + 1);
 	i = 0;
-	while (i < len)
+	result = 1;
+	while (i < pow)
 	{
-		if (str[i] >= 'A' && str[i] <= 'Z')
-			str_lower[i] = str[i] + 32;
-		else
-			str_lower[i] = str[i];
+		result *= nb;
 		i ++;
 	}
-	return (str_lower);
+	return (result);
 }

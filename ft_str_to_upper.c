@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_str_to_upper.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/10 12:50:16 by rukkyaa           #+#    #+#             */
-/*   Updated: 2022/06/10 17:57:46 by rukkyaa          ###   ########.fr       */
+/*   Created: 2022/06/13 16:58:46 by rukkyaa           #+#    #+#             */
+/*   Updated: 2022/06/13 17:16:43 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "../lib_rukkyaa.h"
+#include "lib_rukkyaa.h"
 
-char	*ft_strdup(const char *string)
+char	*ft_str_to_upper(const char *str)
 {
-	char	*copy;
+	char	*str_upper;
 	size_t	len;
 	size_t	i;
 
-	len = ft_strlen(string);
-	copy = (char *) malloc(len * sizeof(char) + 1);
-	if (copy == NULL)
-		return (copy);
+	len = ft_strlen(str);
+	str_upper = (char *) malloc(len * sizeof(char) + 1);
 	i = 0;
-	while (i <= len)
+	while (str[i] != '\0')
 	{
-		copy[i] = string[i];
+		if (str[i] >= 'a' && str[i] <= 'z')
+			str_upper[i] = str[i] - 32;
+		else
+			str_upper[i] = str[i];
 		i ++;
 	}
-	return (copy);
+	return (str_upper);
 }

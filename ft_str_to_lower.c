@@ -1,35 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_str_to_lower.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/12 00:10:26 by rukkyaa           #+#    #+#             */
-/*   Updated: 2022/06/12 18:41:39 by rukkyaa          ###   ########.fr       */
+/*   Created: 2022/06/13 16:58:46 by rukkyaa           #+#    #+#             */
+/*   Updated: 2022/06/13 17:32:53 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-int	ft_atoi(const char *str)
-{
-	int	i;
-	int	result;
-	int	is_neg;
+#include "lib_rukkyaa.h"
 
+char	*ft_str_to_lower(const char *str)
+{
+	char	*str_lower;
+	size_t	len;
+	size_t	i;
+
+	len = ft_strlen(str);
+	str_lower = (char *) malloc(len * sizeof(char) + 1);
 	i = 0;
-	result = 0;
-	is_neg = 1;
-	if (!str)
-		return (0);
-	else if (str[i] == '-')
+	while (i < len)
 	{
-		is_neg = -1;
+		if (str[i] >= 'A' && str[i] <= 'Z')
+			str_lower[i] = str[i] + 32;
+		else
+			str_lower[i] = str[i];
 		i ++;
 	}
-	while (str[i] != '\0' && str[i] - '0' >= 0 && str[i] - '0' <= 9)
-	{
-		result = result * 10;
-		result += str[i] - '0';
-		i ++;
-	}
-	return (result * is_neg);
+	return (str_lower);
 }
