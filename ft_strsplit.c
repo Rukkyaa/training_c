@@ -31,29 +31,28 @@ char	*get_next_sequence(char *string, int index, int len)
 
 size_t	get_len_sequence(char *string, char *delim, int index)
 {
-	int		i;
-	int		j;
+	int		str_index;
+	int		delim_index;
 	int		to_find;
-	char	*sequence;
 
 	to_find = 0;
-	i = index;
-	while (string[i] != '\0' && !to_find)
+	str_index = index;
+	while (string[str_index] != '\0' && !to_find)
 	{
-		j = 0;
-		while (string[i] == delim[j ++])
+		delim_index = 0;
+		while (string[str_index] == delim[delim_index ++])
 		{
-			if (delim[j] == '\0')
+			if (delim[delim_index] == '\0')
 			{
 				to_find = 1;
-				i -= ft_strlen(delim);
+				str_index -= ft_strlen(delim);
 			}
 			else
-				i ++;
+				str_index ++;
 		}
-		i ++;
+		str_index ++;
 	}
-	return (i - index);
+	return (str_index - index);
 }
 
 int	get_nb_sequences(char *string, char *delim)
